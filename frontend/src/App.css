@@ -1,0 +1,347 @@
+/*  GLOBAL  */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('https://t4.ftcdn.net/jpg/02/94/26/33/360_F_294263329_1IgvqNgDbhmQNgDxkhlW433uOFuIDar4.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  z-index: -1;
+}
+
+/*  NAVBAR  */
+.navbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 14px 20px;
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar button {
+  padding: 10px 20px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar button:hover {
+  background-color: #584fcf;
+}
+
+
+/* TITLOS */
+h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* CONTAINER  */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/*  CARD*/
+.card {
+  background: rgba(30, 30, 30, 0.75); /* Σκούρο ημιδιαφανές */
+  border-radius: 20px;
+  padding: 24px;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #dddddd;
+}
+
+.card button {
+  margin-top: 12px;
+  padding: 10px 16px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #574ed6;
+}
+
+
+/*RESERVATIONS */
+.reservation-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reservation-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 16px;
+  border-left: 5px solid #6c63ff;
+  border-radius: 12px;
+  color: #f0f0f0;
+  font-size: 15px;
+}
+
+/*  FORMS  */
+.form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  background-color: #f3f3f3;
+}
+
+/* AUTH PAGES */
+.auth-container {
+  max-width: 400px;
+  margin: 100px auto;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.auth-container h2 {
+  color: #fff;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  background-color: #eee;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #6c63ff;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.auth-container button:hover {
+  background-color: #574ed6;
+}
+
+.auth-container p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #ccc;
+}
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #333;
+  backdrop-filter: blur(5px);
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.search-input::placeholder {
+  color: #888;
+}
+.container {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 14px;
+  max-width: 500px;
+  margin: 3rem auto;
+  color: #f9f9f9;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 0.5s ease;
+}
+
+.container h2 {
+  text-align: center;
+  color: #574ed6;
+  margin-bottom: 1.5rem;
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  color: #ddd;
+  font-weight: 500;
+}
+
+form select,
+form input {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #040404;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: #000000;
+  backdrop-filter: blur(8px);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: border 0.3s;
+}
+
+form select:focus,
+form input:focus {
+  outline: none;
+  border-color: #574ed6;
+}
+
+form button {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background-color: #574ed6;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #574ed6;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  color: #333;
+  text-align: center;
+  animation: zoomIn 0.4s ease forwards;
+}
+
+.modal h3 {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+.modal p {
+  margin-bottom: 1rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+.modal button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #0d6efd; /* Μπλε κουμπί */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal button:hover {
+  background-color: #0b5ed7;
+}
+
+/* Animation */
+@keyframes zoomIn {
+  from {
+    transform: translateY(-10%) scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-10%) scale(1);
+    opacity: 1;
+  }
+}
